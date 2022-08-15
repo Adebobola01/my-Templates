@@ -33,6 +33,29 @@ const displayAddr = () => {
     connectBtnContainer.innerHTML = addr;
 };
 
+///////////////////////////////////
+/////////////////////
+//initialize
+
+const initialize = () => {
+    const isMetaMaskInstalled = () => {
+        if (window.ethereum) {
+            const { ethereum } = window;
+            console.log(Boolean(ethereum.isMetaMask));
+            return Boolean(ethereum && ethereum.isMetaMask);
+        }
+    };
+
+    const MetaMaskClientCheck = () => {
+        if (!isMetaMaskInstalled()) {
+            connectBtnContainer.innerHTML = "please Install Metamask";
+        }
+    };
+
+    MetaMaskClientCheck();
+};
+
+window.addEventListener("DOMContentLoaded", initialize);
 connectBtn.addEventListener("click", connectWallet);
 wallet.addEventListener("click", async () => {
     await getWalletHandler();
