@@ -36,12 +36,24 @@ body {
     justify-content: space-between;
 }
 
+.wallets {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.5;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
 .select-wallet {
     margin-bottom: 2rem;
 }
 
 .wallet__text--container {
     text-align: center;
+}
+
+.wallet__name {
+    width: 30%;
 }
 
 .wallet__btn {
@@ -51,12 +63,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem;
+    padding: 0.8rem 3rem;
     border: 0px solid rgba(9, 147, 236, 0.5);
     border-radius: 0.5rem;
     border-width: 1px;
     cursor: pointer;
 }
+
+.wallet__btn:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
 .wallet__btn:hover {
     border: 1px solid #db469f;
 }

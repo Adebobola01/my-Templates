@@ -6,7 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nav Template</title>
         <link rel="stylesheet" href="./src/nav.css" />
-        <!-- <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script> -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"
+            integrity="sha256-OfIB2zuUgSYcwWYMPC+YgPsJ70TB5f5dni/Z3rgYvRA="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
         <script src="./src/nav.js" defer></script>
     </head>
     <body>
@@ -15,16 +21,23 @@
             <div class="select-wallet">
                 <span> Select Wallet </span>
             </div>
-            <div class="wallet__btn">
-                <span class="wallet__name">Metamask</span>
-                <img
-                    src="./src/images/metamask-fox.svg"
-                    alt="metamask__logo"
-                    class="wallet__img"
-                />
-            </div>
-            <div class="wallet__text--container">
-                <span class="wallet__text">other wallets coming soon...</span>
+            <div class="wallets">
+                <div class="wallet__btn metamask__btn">
+                    <img
+                        src="./src/images/metamask-fox.svg"
+                        alt="metamask__logo"
+                        class="wallet__img"
+                    />
+                    <span class="wallet__name">Metamask</span>
+                </div>
+                <div class="wallet__btn walletConnect__btn">
+                    <img
+                        src="./src/images/WalletConnect-icon.svg"
+                        alt="metamask__logo"
+                        class="wallet__img"
+                    />
+                    <span class="wallet__name">WalletConnect</span>
+                </div>
             </div>
         </div>
         <nav class="nav-bar">
@@ -33,5 +46,6 @@
                 <button class="connect--button">Connect</button>
             </div>
         </nav>
+        <div class="main"></div>
     </body>
 </html>
